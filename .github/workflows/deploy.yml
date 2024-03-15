@@ -48,14 +48,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-      - name: Deploy Dist
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: dist
-          publish_dir: ./.vitepress/dist
-          force_orphan: true
-          commit_message: ${{ github.event.head_commit.message }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: dist
+            publish_dir: ./.vitepress/dist
+            force_orphan: true
 
   # 部署工作
   deploy:
