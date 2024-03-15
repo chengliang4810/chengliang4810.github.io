@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "我的文档",
+  base: '/',
   description: "好好生活好好吃饭",
   themeConfig: {
     // 搜索功能
