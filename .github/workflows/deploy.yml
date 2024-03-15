@@ -25,6 +25,7 @@ concurrency:
 jobs:
   # 构建工作
   build:
+    name: 构建
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -64,7 +65,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+    name: 部署Pages
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
@@ -72,6 +73,7 @@ jobs:
 
   # Sync to Gitee
   sync:
+    name: 同步到GITEE
     needs: build
     runs-on: ubuntu-latest
     steps:
