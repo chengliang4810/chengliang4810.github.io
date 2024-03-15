@@ -48,17 +48,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-      - name: Push dist Branch
-        run: |
-          git config --global user.name "chengliang4810"
-          git config --global user.email "chengliang4810@163.com"
-          git config --global user.password ${{ secrets.GIT_PASSWORD }}
-          git clone -b dist --single-branch https://github.com/chengliang4810/chengliang4810.github.io /tmp/repo
-          cp -r .vitepress/dist/* /tmp/repo
-          cd /tmp/repo
-          git add .
-          git commit -m 'update'
-          git push origin dist --force
+      - name: Deploy Dist
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.vitepress/dist
+          external_repository: chengliang4810/chengliang4810.github.io
+          publish_branch: master
 
   # 部署工作
   deploy:
