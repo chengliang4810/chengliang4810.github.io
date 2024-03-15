@@ -49,8 +49,6 @@ jobs:
         with:
           path: .vitepress/dist
       - name: Push dist Branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "chengliang4810"
           git config --global user.email "chengliang4810@163.com"
