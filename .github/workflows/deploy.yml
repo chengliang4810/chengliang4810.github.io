@@ -54,7 +54,10 @@ jobs:
         run: |
           git config --global user.name "chengliang4810"
           git config --global user.email "chengliang4810@163.com"
-          git commit ./.vitepress/dist/*
+          git clone -b dist --single-branch https://github.com/chengliang4810/chengliang4810.github.io /tmp/repo
+          cp -r .vitepress/dist/* /tmp/repo
+          cd /tmp/repo
+          git add .
           git commit -m 'update'
           git push origin dist --force
 
