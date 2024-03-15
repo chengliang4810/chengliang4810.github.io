@@ -51,7 +51,7 @@ jobs:
         run: |
           git config --global user.name "chengliang4810"
           git config --global user.email "chengliang4810@163.com"
-          git check -b dist
+          git checkout -b dist
           git push origin dist --force
 
   # 部署工作
