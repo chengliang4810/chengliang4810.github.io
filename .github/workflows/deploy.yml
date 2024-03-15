@@ -51,7 +51,7 @@ jobs:
       - name: Deploy Dist
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.TOKEN_GITHUB }}
           publish_dir: ./.vitepress/dist
           external_repository: chengliang4810/chengliang4810.github.io
           publish_branch: master
