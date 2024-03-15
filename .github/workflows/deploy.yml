@@ -57,13 +57,17 @@ jobs:
             publish_branch: dist
             publish_dir: ./.vitepress/dist
             force_orphan: true
-      - name: Async Gitee
+      - name: Configure Git
         run: |
           git config --global user.name "chengliang4810"
           git config --global user.email "chengliang4810@163.com"
           git config --global user.password ${{ secrets.GIT_PASSWORD }}
+      - name: Clone Gitee
+        run: |
           git clone -b master --single-branch https://gitee.com/chengliang4810/chengliang4810.gitee.io.git /tmp/repo
           cp -r .vitepress/dist/* /tmp/repo
+      - name: Push Gitee Force
+        run: |
           cd /tmp/repo
           git add .
           git commit -m 'update'
