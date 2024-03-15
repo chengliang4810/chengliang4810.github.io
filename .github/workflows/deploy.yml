@@ -48,23 +48,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-
-  # 推送到dist分支
-  push:
-    needs: build
-    runs-on: ubuntu-latest
-    name: Push
-    steps:
-      - name: push to dist branch
-        uses: actions/checkout@v4
+      - name: Push dist Branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "chengliang4810"
           git config --global user.email "chengliang4810@163.com"
-          git checkout -b dist
+          git commit ./.vitepress/dist/*
+          git commit -m 'update'
           git push origin dist --force
-        
 
   # 部署工作
   deploy:
