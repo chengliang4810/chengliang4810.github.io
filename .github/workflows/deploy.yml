@@ -1,6 +1,6 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
-name: Deploy VitePress site to Pages
+name: Deploy Docs site to Pages
 
 on:
   # 使用 `main` 分支作为默认分支
@@ -31,7 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
       - uses: pnpm/action-setup@v3
