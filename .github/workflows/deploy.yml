@@ -75,10 +75,12 @@ jobs:
     name: 同步到GITEE
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     env:
       dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
       dst_token: ${{ secrets.GITEE_TOKEN }}
-      gitee_user: chengliang4810
+      gitee_user: "chengliang4810"
     steps:
       - uses: actions/checkout@v2
         with:
@@ -106,6 +108,8 @@ jobs:
 
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
+        env:
+          git_password: ${{ secrets.GIT_PASSWORD }}
         with:
           # 注意替换为你的 Gitee 用户名
           gitee-username: chengliang4810
