@@ -75,9 +75,17 @@ jobs:
     name: 同步到GITEE
     needs: build
     runs-on: ubuntu-latest
+    env:
+      dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+      dst_token: ${{ secrets.GITEE_TOKEN }}
+      gitee_user: chengliang4810
     steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: Sync to Gitee
         uses: Yikun/hub-mirror-action@master
+        if: env.dst_key && env.dst_token && env.gitee_user
         with:
           # 必选，需要同步的 Github 用户（源）
           src: 'github/${{ github.repository_owner }}'
