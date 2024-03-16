@@ -73,7 +73,7 @@ jobs:
           git add .
           git commit -m 'update'
           echo $GIT_PASSWORD
-          git push https://chengliang4810:GIT_PASSWORD@gitee.com/chengliang4810/chengliang4810.gitee.io.git master --force
+          git push https://chengliang4810:$GIT_PASSWORD@gitee.com/chengliang4810/chengliang4810.gitee.io.git master --force
 
   # 部署工作
   deploy:
