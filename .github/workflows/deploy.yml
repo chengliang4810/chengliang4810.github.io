@@ -102,6 +102,7 @@ jobs:
           # 直接取当前项目的仓库名
           mappings: "${{ github.event.repository.name }}=>chengliang4810"
           static_list: ${{ github.event.repository.name }}
+          force_update: true
           # 还有黑、白名单，静态名单机制，可以用于更新某些指定库
           # static_list: 'repo_name,repo_name2'
 
