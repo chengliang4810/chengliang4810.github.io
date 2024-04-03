@@ -2,10 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "LayJava",
+  title: "💦LayJava",
   base: '/',
   lang: "zh-cn",
-  description: "好好生活好好吃饭",
+  description: "layjava、layjava-admin、layjava管理系统",
   ignoreDeadLinks: true, // 忽略死链接
   themeConfig: {
     outline: {
@@ -17,9 +17,16 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/' },
-      { text: 'Solon', link: '/solon/' }
+      { text: '🔥首页', link: '/'},
+      { text: '🛞Solon', link: '/solon/' }
     ],
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
+    darkModeSwitchLabel: '浅/深色模式切换',
+    darkModeSwitchTitle: '切换到深色模式',
+    lightModeSwitchTitle: '切换到浅色模式',
     sidebar: {
       // 当用户位于 `guide` 目录时，会显示此侧边栏
       '/solon/' : [
@@ -33,6 +40,10 @@ export default defineConfig({
       ],
     },
 
+    footer: {
+      message: '打造适合打工人的Admin框架.',
+      copyright: 'Copyright © 2024 LayJava'
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chengliang4810/chengliang4810.github.io' },
