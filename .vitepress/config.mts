@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/',
   lang: "zh-cn",
   description: "好好生活好好吃饭",
-
+  // ignoreDeadLinks: true, // 忽略死链接
   themeConfig: {
     outline: {
       label: '文章导航'
@@ -27,8 +27,6 @@ export default defineConfig({
           text: 'Solon',
           items: [
             {text: '简介', link: '/solon/'},
-            {text: 'solon与mybatis-plus-generator', link: '/guide/one'},
-            {text: 'Two', link: '/guide/two'}
           ]
         }
       ],
