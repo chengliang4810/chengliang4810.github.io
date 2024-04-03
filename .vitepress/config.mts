@@ -2,15 +2,17 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "💦LayJava",
+  title: "LayJava",
   base: '/',
   lang: "zh-cn",
   description: "layjava、layjava-admin、layjava管理系统",
+  head: [['link', { href: '/favicon.ico' }]],
   ignoreDeadLinks: true, // 忽略死链接
   themeConfig: {
     outline: {
       label: '文章导航'
     },
+    logo: '/favicon.ico',
     // 搜索功能
     search: {
       provider: 'local'
@@ -18,7 +20,18 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '🔥首页', link: '/'},
-      { text: '🛞Solon', link: '/solon/' }
+      { text: '🍪指南',
+        items: [
+          { text: '介绍' ,items: [
+              { text: '前言', link: '/guide/' },
+          ]},
+          { text: '使用' ,items: [
+              { text: '前言', link: '/guide/use' },
+          ]},
+        ]
+      },
+      { text: '🛞Solon', link: '/solon/' },
+      { text: '🦁团队', link: '/team/' }
     ],
     docFooter: {
       prev: '上一篇',

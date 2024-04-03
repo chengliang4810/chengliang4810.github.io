@@ -8,14 +8,11 @@ hero:
   image:
     src: /banner.svg
     alt: LayJava Banner
-  tagline: 支持Solon的Java Admin框架 🚩为中国国产化匠心打造❗
-#  actions:
-#    - theme: brand
-#      text: Markdown Examples
-#      link: /markdown-examples
-#    - theme: alt
-#      text: API Examples
-#      link: /api-examples
+  tagline: 基于Solon的Java Admin框架 🚩为中国国产化匠心打造❗
+  actions:
+    - theme: brand
+      text: 快速开始
+      link: /guide/
 
 features:
   - title: 轻量
