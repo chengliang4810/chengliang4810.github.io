@@ -1,11 +1,11 @@
 #  MybatisPlus 简介
-MyBatis-Plus (opens new window)（简称 MP）是一个 MyBatis (opens new window)的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。
+MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。
 
 ::: tip
 solon 支持所有的Java框架，使用不了大部分是因为依赖了Spring框架。 因此Mybatis-plus-generator可以直接在solon环境使用
 :::
 
-## 官方教程
+## 官方教程与完整配置
 
 > 使用案例 https://baomidou.com/pages/779a6e/
 
