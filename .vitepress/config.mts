@@ -27,6 +27,7 @@ export default defineConfig({
           text: 'Solon',
           items: [
             {text: '简介', link: '/solon/'},
+            {text: '集成MybatisPlusGenerator', link: '/solon/mybatis-plus-generator'},
           ]
         }
       ],
