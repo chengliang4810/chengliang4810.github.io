@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/',
   lang: "zh-cn",
   description: "好好生活好好吃饭",
-  // ignoreDeadLinks: true, // 忽略死链接
+  ignoreDeadLinks: true, // 忽略死链接
   themeConfig: {
     outline: {
       label: '文章导航'
