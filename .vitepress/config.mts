@@ -48,6 +48,7 @@ export default defineConfig({
           items: [
             {text: '简介', link: '/solon/'},
             {text: '集成MybatisPlusGenerator', link: '/solon/mybatis-plus-generator'},
+            {text: 'docs文档辅助插件', link: '/solon/doc-docket'},
           ]
         }
       ],
