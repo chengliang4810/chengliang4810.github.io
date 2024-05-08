@@ -31,6 +31,7 @@ export default defineConfig({
         ]
       },
       { text: '🛞Solon', link: '/solon/' },
+      { text: '🧩uni-app', link: '/uni-app/' },
       { text: '🦁团队', link: '/team/' }
     ],
     docFooter: {
@@ -50,6 +51,14 @@ export default defineConfig({
             {text: '集成MybatisPlusGenerator', link: '/solon/mybatis-plus-generator'},
             {text: '无需注解生成接口文档', link: '/solon/openapi2-javadoc'},
             {text: 'docs文档辅助插件', link: '/solon/doc-docket'},
+          ]
+        }
+      ],
+      '/uni-app/' : [
+        {
+          text: 'uni-app',
+          items: [
+            {text: '简介', link: '/uni-app/'},
           ]
         }
       ],
