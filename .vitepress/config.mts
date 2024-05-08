@@ -33,6 +33,19 @@ export default defineConfig({
         search: {
             provider: 'local'
         },
+        // 文档最后的更改时间
+        lastUpdated: {
+            text: '更新时间',
+            formatOptions: {
+                year: "numeric",
+                month: "numeric",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                second: "numeric",
+                hour12: false,
+            }
+        },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: '🔥首页', link: '/'},
