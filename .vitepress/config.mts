@@ -4,7 +4,10 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     title: "LayJava",
     base: '/',
-    lang: "zh-cn",
+    lang: "zh-CN",
+    locales: {
+        root: { label: "简体中文", lang: "zh-CN" },
+    },
     description: "layjava、layjava-admin、layjava管理系统",
     head: [
         ['link', {href: '/favicon.ico'}],
@@ -31,7 +34,13 @@ export default defineConfig({
         logo: '/favicon.ico',
         // 搜索功能
         search: {
-            provider: 'local'
+            // provider: 'local'
+            provider: 'algolia',
+            options: {
+                appId: '31QO4R75GT',
+                apiKey: '5468a95d7327ac1fce9a242a809c576e',
+                indexName: 'docs'
+            }
         },
         // 文档最后的更改时间
         lastUpdated: {
