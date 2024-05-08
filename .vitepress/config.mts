@@ -34,13 +34,13 @@ export default defineConfig({
         logo: '/favicon.ico',
         // 搜索功能
         search: {
-            // provider: 'local'
-            provider: 'algolia',
-            options: {
-                appId: '31QO4R75GT',
-                apiKey: '5468a95d7327ac1fce9a242a809c576e',
-                indexName: 'docs'
-            }
+            provider: 'local'
+            // provider: 'algolia',
+            // options: {
+            //     appId: '31QO4R75GT',
+            //     apiKey: '5468a95d7327ac1fce9a242a809c576e',
+            //     indexName: 'docs'
+            // }
         },
         // 文档最后的更改时间
         lastUpdated: {
