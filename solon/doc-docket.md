@@ -1,7 +1,12 @@
 #  doc-docket 简介
 doc-docket是一个 docs模块的帮助工具，根据配置文件自动注入DocDocket对象.
 
-::: tip
+::: danger 请注意
+solon 官方在 2.9.0版本开始支持根据配置自动构建接口文档配置。 
+请使用官方配置，该插件现已停止维护。
+:::
+
+::: tip 
 solon docs为了不同模块支持无缝切换仅提供了DocDocket对象注入的方式，该项目为了让用户无需手动注入DocDocket对象，提供了自动注入的功能
 :::
 
