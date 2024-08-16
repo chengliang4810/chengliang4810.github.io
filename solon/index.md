@@ -73,31 +73,3 @@ public class HelloServiceImpl implements HelloService{
     }
 }
 ```
-
-
-## 快速集成开发包（快捷组合包）：
-
-###### 主框架
-
-| 组件 | 说明 |
-| --- | --- |
-| org.noear:solon-parent | 框架版本管理 |
-| org.noear:solon | 主框架 |
-| org.noear:nami | 伴生框架（做为solon remoting 的客户端）|
-
-###### 快捷组合包及相互关系
-
-
-| 快捷组合包 | 说明                                                    |
-| --- |-------------------------------------------------------|
-| [org.noear:solon-lib](/article/279) | 快速开发基础组合包                                             |
-| [org.noear:solon-job](/article/476)  | =solon-lib + simple job；快速开发定时任务应用                       |
-| [org.noear:solon-api](/article/280)  | =solon-lib + smart-http；快速开发接口应用                       |
-| [org.noear:solon-web](/article/281)  | =solon-api + freemarker + sessionstate；快速开发WEB应用       |
-| [org.noear:solon-web-beetl](/article/282)  | =solon-api + beetl + beetlsql + sessionstate；快速开发WEB应用 |
-| [org.noear:solon-web-enjoy](/article/283)  | =solon-api + enjoy + arp + sessionstate；快速开发WEB应用      |
-| [org.noear:solon-rpc](/article/284)  | =solon-api + nami；快速开发RPC应用                            |
-| [org.noear:solon-cloud](/article/285)  | =solon-rpc + consul；快速开发微服务应用                          |
-| [org.noear:solon-cloud-water](/article/286)        | =solon-rpc  + water 套件     | 
-| [org.noear:solon-cloud-alibaba](/article/287)        | =solon-rpc  + alibaba 套件 (nacos, rocketmq, sentinel)     | 
-
