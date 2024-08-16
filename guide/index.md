@@ -1,103 +1,55 @@
-# Solon 简介
-Java “生态型”应用开发框架。从零开始构建，有自主的标准规范与开放生态。目前已近14万行代码。
+# LayJava Admin
 
-* 追求： **更快、更小、更简单**
-* 提倡： **克制、简洁、高效、开放、生态**
 
-## 特色
+## 特点
 
-更高的计算性价比：
+更高的吞吐量：
 
-* 吞吐：每秒并发高 2～ 3 倍；资源：内存节省 1/3 ~ 1/2。
+* 吞吐：每秒并发高 2～ 3 倍
 
-更高的开发效率，更简单的编码体验：
+更少的内存
+* 内存节省 1/3 ~ 1/2。
 
-* 开发：入门快，架构简单；调试：问题定位简单，重启快 5 ～ 10 倍。
+更小的体积
 
-更快的生产与部署体验：
+* 工件：打包缩小 50% ~ 90%；
 
-* 工件：打包缩小 50% ~ 90%；生产：镜像就绪迅速，启动快 5 ～ 10 倍。
+更快的速度
+
+* 启动快 5 ～ 10 倍。
 
 更自由的运行时兼容选择：
 
-* 突破：非 java-ee 架构；兼容：同时支持 java8 ～  java22 的运行时
+* 同时支持 java8 ～  java22 的运行时
 
+## 功能列表
 
+::: warning 注意
+不支持多租户， 有需要自行添加
+:::
 
-## 技术介绍
+| 业务     | 功能说明                                                                 |
+|--------|----------------------------------------------------------------------|
+| 客户端管理  | 系统内对接的所有客户端管理 如: pc端、小程序端等<br>支持动态授权登录方式 如: 短信登录、密码登录等 支持动态控制token时效 |
+| 用户管理   | 用户的管理配置 如:新增用户、分配用户所属部门、角色、岗位等                                       |
+| 部门管理   | 配置系统组织机构（公司、部门、小组） 树结构展现支持数据权限                                       |
+| 岗位管理   | 配置系统用户所属担任职务                                                         |
+| 菜单管理   | 配置系统菜单、操作权限、按钮权限标识等                                                  |
+| 角色管理   | 角色菜单权限分配、设置角色按机构进行数据范围权限划分                                           |
+| 字典管理   | 对系统中经常使用的一些较为固定的数据进行维护                                               |
+| 参数管理   | 对系统动态配置常用参数                                                          |
+| 通知公告   | 系统通知公告信息发布维护                                                         |
+| 操作日志   | 系统正常操作日志记录和查询 系统异常信息日志记录和查询                                          |
+| 登录日志   | 系统登录日志记录查询包含登录异常                                                     |
+| 文件管理   | 系统文件展示、上传、下载、删除等管理                                                   |
+| 文件配置管理 | 系统文件上传、下载所需要的配置信息动态添加、修改、删除等管理                                       |
+| 在线用户管理 | 已登录系统的在线用户信息监控与强制踢出操作                                                |
+| 代码生成   | 多数据源前后端代码的生成（java、html、xml、sql）支持CRUD下载                              |
+| 接口文档   | 根据业务代码自动生成相关的api接口文档      
 
-内核零依赖；组合不同的插件应对不同需求；方便定制；快速开发。
+## Sql 审计功能
+SQL 审计是一项非常重要的工作，是企业数据安全体系的重要组成部分，通过 SQL 审计功能为数据库请求进行全程记录，为事后追溯溯源提供了一手的信息，同时可以通过可以对恶意访问及时警告管理员，为防护策略优化提供数据支撑。
 
-* Http、WebSocket、Socket 三种信号统一的开发体验（俗称：三源合一）
-* 支持“注解”与“手动”两种模式并重，按需自由操控
-* Not Servlet，可以适配任何 Http 通讯框架（所以：最小 0.3m 运行rpc架构）
-* [独特的 IOC/AOP 容器设计](/article/241)。**不会因为依赖变多而启动很慢**
-* 适合 Web、Scheduling、FaaS、Remoting、Cloud 等任何开发场景
-* 兼顾 Handler + Context 和 Listener + Message 两种架构模式
-* 强调插件式扩展，可扩展可切换；适应不同的应用场景
-* 支持 GraalVm Native Image 打包
-* 允许业务插件“热插”、“热拔”、“热管理”
+同时、提供 SQL 访问日志长期存储，满足等保合规要求。
 
-
-## Hello world
-
-```java
-@SolonMain
-public class App{
-    public static void main(String[] args){
-        Solon.start(App.class, args, app->{
-            //Handler 模式：
-            app.get("/hello", (c)->c.output("Hello world!"));
-        });
-    }
-}
-
-//Controller 模式：(mvc or rest-api)
-@Controller
-public class DemoController{
-    //限定 put 方法类型
-    @Put
-    @Mapping("/mvc/hello")
-    public String hello(String name){
-        return "Hello " + name;
-    }
-}
-
-//Remoting 模式：(rpc)
-@Mapping("/rpc/hello")
-@Remoting
-public class HelloServiceImpl implements HelloService{
-    @Override
-    public String hello(){
-        return "Hello world!";
-    }
-}
-```
-
-
-## 快速集成开发包（快捷组合包）：
-
-###### 主框架
-
-| 组件 | 说明 |
-| --- | --- |
-| org.noear:solon-parent | 框架版本管理 |
-| org.noear:solon | 主框架 |
-| org.noear:nami | 伴生框架（做为solon remoting 的客户端）|
-
-###### 快捷组合包及相互关系
-
-
-| 快捷组合包 | 说明                                                    |
-| --- |-------------------------------------------------------|
-| [org.noear:solon-lib](/article/279) | 快速开发基础组合包                                             |
-| [org.noear:solon-job](/article/476)  | =solon-lib + simple job；快速开发定时任务应用                       |
-| [org.noear:solon-api](/article/280)  | =solon-lib + smart-http；快速开发接口应用                       |
-| [org.noear:solon-web](/article/281)  | =solon-api + freemarker + sessionstate；快速开发WEB应用       |
-| [org.noear:solon-web-beetl](/article/282)  | =solon-api + beetl + beetlsql + sessionstate；快速开发WEB应用 |
-| [org.noear:solon-web-enjoy](/article/283)  | =solon-api + enjoy + arp + sessionstate；快速开发WEB应用      |
-| [org.noear:solon-rpc](/article/284)  | =solon-api + nami；快速开发RPC应用                            |
-| [org.noear:solon-cloud](/article/285)  | =solon-rpc + consul；快速开发微服务应用                          |
-| [org.noear:solon-cloud-water](/article/286)        | =solon-rpc  + water 套件     | 
-| [org.noear:solon-cloud-alibaba](/article/287)        | =solon-rpc  + alibaba 套件 (nacos, rocketmq, sentinel)     | 
-
+![img.png](images/img.png)

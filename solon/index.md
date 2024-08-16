@@ -31,7 +31,7 @@ Java “生态型”应用开发框架。从零开始构建，有自主的标准
 * Http、WebSocket、Socket 三种信号统一的开发体验（俗称：三源合一）
 * 支持“注解”与“手动”两种模式并重，按需自由操控
 * Not Servlet，可以适配任何 Http 通讯框架（所以：最小 0.3m 运行rpc架构）
-* [独特的 IOC/AOP 容器设计](/article/241)。**不会因为依赖变多而启动很慢**
+* 独特的 IOC/AOP 容器设计。**不会因为依赖变多而启动很慢**
 * 适合 Web、Scheduling、FaaS、Remoting、Cloud 等任何开发场景
 * 兼顾 Handler + Context 和 Listener + Message 两种架构模式
 * 强调插件式扩展，可扩展可切换；适应不同的应用场景
