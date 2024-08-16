@@ -81,7 +81,7 @@ export default defineConfig({
             {text: "🛞Solon", link: "/solon/"},
             // { text: "🧩uni-app", link: "/uni-app/" },
             {text: "🛌常用指令", link: "/linux/"},
-            // { text: "🦁团队", link: "/team/" },
+            { text: "🦁团队", link: "/team/" },
         ],
         docFooter: {
             prev: "上一篇",
