@@ -78,10 +78,15 @@ export default defineConfig({
                     },
                 ],
             },
-            {text: "🛞Solon", link: "/solon/"},
+            {
+                text: "🛞开源项目", items: [
+                    {text: "solon", link: "/open-source/solon/"},
+                    {text: "snail-job", link: "/open-source/snail-job/"}
+                ]
+            },
             // { text: "🧩uni-app", link: "/uni-app/" },
             {text: "🛌常用指令", link: "/linux/"},
-            { text: "🦁团队", link: "/team/" },
+            {text: "🦁团队", link: "/team/"},
         ],
         docFooter: {
             prev: "上一篇",
@@ -92,26 +97,20 @@ export default defineConfig({
         lightModeSwitchTitle: "切换到浅色模式",
         sidebar: {
             // 当用户位于 `guide` 目录时，会显示此侧边栏
-            "/solon/": [
+            "/open-source/solon/": [
                 {
                     text: "Solon",
                     items: [
-                        {text: "简介", link: "/solon/"},
+                        {text: "简介", link: "/open-source/solon/"},
                         {
                             text: "集成MybatisPlusGenerator",
-                            link: "/solon/mybatis-plus-generator",
+                            link: "/open-source/solon/mybatis-plus-generator",
                         },
-                        {text: "无需注解生成接口文档", link: "/solon/openapi2-javadoc"},
-                        {text: "docs文档辅助插件", link: "/solon/doc-docket"},
+                        {text: "无需注解生成接口文档", link: "/open-source/solon/openapi2-javadoc"},
+                        {text: "docs文档辅助插件", link: "/open-source/solon/doc-docket"},
                     ],
                 },
             ],
-            // "/uni-app/": [
-            //   {
-            //     text: "uni-app",
-            //     items: [{ text: "简介", link: "/uni-app/" }],
-            //   },
-            // ],
             "/linux/": [
                 {
                     text: "Linux",
