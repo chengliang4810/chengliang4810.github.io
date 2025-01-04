@@ -14,6 +14,9 @@ hero:
       text: 快速开始
       link: /guide/
     - theme: alt
+      text: 演示系统
+      link: https://admin.layjava.com
+    - theme: alt
       text: 常用环境安装
       link: /linux/code
 

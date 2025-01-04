@@ -70,7 +70,7 @@ export default defineConfig({
                 items: [
                     {
                         text: "介绍",
-                        items: [{text: "前言", link: "/guide/"}],
+                        items: [{text: "前言", link: "/guide/"}, {text: "前往体验", link: "https://admin.layjava.com"}],
                     },
                     {
                         text: "使用",
@@ -78,6 +78,7 @@ export default defineConfig({
                     },
                 ],
             },
+            {text: "✋演示系统", link: "https://admin.layjava.com"},
             {
                 text: "🛞开源项目", items: [
                     {text: "solon", link: "/open-source/solon/"},

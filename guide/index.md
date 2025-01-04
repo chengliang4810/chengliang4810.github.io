@@ -1,5 +1,10 @@
 # LayJava Admin
 
+## 演示系统
+
+> [https://admin.layjava.com](https://admin.layjava.com)
+
+> 2核2G小服务器，前后端、数据库等都在该服务器，速度慢是正常的
 
 ## 特点
 
