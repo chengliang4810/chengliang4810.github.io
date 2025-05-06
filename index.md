@@ -75,4 +75,8 @@ Sa-Token 可用于独立应用、微服务、分布式系统等各种java后端�
 仅需要 jdk17 即可运行。默认采用内置数据库、本地缓存，无需其他配置，开箱即用。<br/>
 
 
+<script setup>
+  import ParticlesBg from '.vitepress/components/ParticlesBg.vue'
+</script>
 
+<ParticlesBg color="black" :quantity="800"/>

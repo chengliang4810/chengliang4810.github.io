@@ -5,6 +5,8 @@ export default defineConfig({
     title: "积木区",
     base: "/",
     lang: "zh-CN",
+    vite: {
+    },
     locales: {
         root: { label: "简体中文", lang: "zh-CN" },
     },
