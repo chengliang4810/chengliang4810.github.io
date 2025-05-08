@@ -17,7 +17,7 @@ hero:
       link: /guide/
     - theme: alt
       text: 演示系统
-      link: https://admin.layjava.com
+      link: https://admin.jimuqu.com
 
 features:
   - title: 简
@@ -55,6 +55,7 @@ features:
   import { ref } from 'vue'
   import confetti from "canvas-confetti";
 
+setTimeout(() => showConfetti(), 3000);
   // showConfetti();
 // setInterval(() => {
 //   showConfetti();
