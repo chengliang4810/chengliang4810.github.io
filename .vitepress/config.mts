@@ -44,9 +44,9 @@ export default defineConfig({
             // provider: 'local'
             provider: "algolia",
             options: {
-                appId: "G1ZSJOR2XL",
-                apiKey: "18bbe5bd6cb02b1a83ca163873ce03f7",
-                indexName: "layjava",
+                appId: "2GDHP2JZGR",
+                apiKey: "f37974ce9f9221371283a6cd21a48e16",
+                indexName: "doc",
             },
         },
         // 文档最后的更改时间
