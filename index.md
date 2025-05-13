@@ -71,6 +71,8 @@ features:
       >  国产Java应用开发框架
 </h2> -->
 
+<ParticlesBg color="black" :quantity="500"/>
+
 ## Solon 国产Java应用开发框架
 
 对标 Broadcom Spring 生态。并发高 700%；内存省 50%；启动快 10 倍；打包小 90%；同时支持 java8 ~ java23, native 运行时。
@@ -98,4 +100,12 @@ Sa-Token 可用于独立应用、微服务、分布式系统等各种java后端�
 仅需要 jdk17 即可运行。默认采用内置数据库、本地缓存，无需其他配置，开箱即用。<br/>
 
 
-<ParticlesBg color="black" :quantity="500"/>
+
+
+## 赞助商
+
+<div class="flex items-center justify-start w-full mt-6">
+  <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank">
+    <img src="/upyun_logo.png" alt="又拍云LOGO" width="100" height="100">
+  </a>
+</div>
