@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime API Examples | 积木区</title>
+    <meta name="description" content="积木、jimu、积木admin、jimu-admin、积木管理系统">
+    <meta name="generator" content="VitePress v2.0.0-alpha.5">
+    <link rel="preload stylesheet" href="/assets/style.DhxNhKQF.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.be82a34d.js"></script>
+    <script type="module" src="/assets/app.Cu3iBJ28.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.G8J_sA8V.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.CbuV_B65.js">
+    <link rel="modulepreload" href="/assets/api-examples.md.CbDLDhtW.lean.js">
+    <link href="/favicon.ico">
+    <meta name="baidu-site-verification" content="codeva-e2PPznBxmF">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-7e4c53a3><!--[--><!--]--><!--[--><span tabindex="-1" data-v-ae62d8ce></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-ae62d8ce>Skip to content</a><!--]--><!----><header class="VPNav" data-v-7e4c53a3 data-v-df46faed><div class="VPNavBar" data-v-df46faed data-v-90d08016><div class="wrapper" data-v-90d08016><div class="container" data-v-90d08016><div class="title" data-v-90d08016><div class="VPNavBarTitle" data-v-90d08016 data-v-1ab6a828><a class="title" href="/" data-v-1ab6a828><!--[--><!--]--><!--[--><img class="VPImage logo" src="/logo.png" alt data-v-e6a202d4><!--]--><span data-v-1ab6a828>积木区</span><!--[--><!--]--></a></div></div><div class="content" data-v-90d08016><div class="content-body" data-v-90d08016><!--[--><!--]--><div class="VPNavBarSearch search" data-v-90d08016><!--[--><!----><div id="docsearch"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-90d08016 data-v-da33306d><span id="main-nav-aria-label" class="visually-hidden" data-v-da33306d> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-da33306d data-v-60f41eca><!--[--><span data-v-60f41eca>🔥首页</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-da33306d data-v-f4e8cac1><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-f4e8cac1><span class="text" data-v-f4e8cac1><!----><span data-v-f4e8cac1>🍪指南</span><span class="vpi-chevron-down text-icon" data-v-f4e8cac1></span></span></button><div class="menu" data-v-f4e8cac1><div class="VPMenu" data-v-f4e8cac1 data-v-55c03e72><div class="items" data-v-55c03e72><!--[--><!--[--><div class="VPMenuGroup" data-v-55c03e72 data-v-53f36975><p class="title" data-v-53f36975>介绍</p><!--[--><!--[--><div class="VPMenuLink" data-v-53f36975 data-v-e216761a><a class="VPLink link" href="/guide/" data-v-e216761a><!--[--><span data-v-e216761a>前言</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-53f36975 data-v-e216761a><a class="VPLink link vp-external-link-icon" href="https://admin.jimuqu.com" target="_blank" rel="noreferrer" data-v-e216761a><!--[--><span data-v-e216761a>前往体验</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--[--><div class="VPMenuGroup" data-v-55c03e72 data-v-53f36975><p class="title" data-v-53f36975>使用</p><!--[--><!--[--><div class="VPMenuLink" data-v-53f36975 data-v-e216761a><a class="VPLink link" href="/guide/use.html" data-v-e216761a><!--[--><span data-v-e216761a>前言</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link vp-external-link-icon VPNavBarMenuLink" href="https://admin.jimuqu.com" target="_blank" rel="noreferrer" tabindex="0" data-v-da33306d data-v-60f41eca><!--[--><span data-v-60f41eca>✋演示系统</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-da33306d data-v-f4e8cac1><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-f4e8cac1><span class="text" data-v-f4e8cac1><!----><span data-v-f4e8cac1>🛞开源项目</span><span class="vpi-chevron-down text-icon" data-v-f4e8cac1></span></span></button><div class="menu" data-v-f4e8cac1><div class="VPMenu" data-v-f4e8cac1 data-v-55c03e72><div class="items" data-v-55c03e72><!--[--><!--[--><div class="VPMenuLink" data-v-55c03e72 data-v-e216761a><a class="VPLink link" href="/open-source/solon/" data-v-e216761a><!--[--><span data-v-e216761a>solon</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-55c03e72 data-v-e216761a><a class="VPLink link" href="/open-source/snail-job/" data-v-e216761a><!--[--><span data-v-e216761a>snail-job</span><!--]--></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/linux/" tabindex="0" data-v-da33306d data-v-60f41eca><!--[--><span data-v-60f41eca>🛌常用指令</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/team/" tabindex="0" data-v-da33306d data-v-60f41eca><!--[--><span data-v-60f41eca>🦁团队</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-90d08016 data-v-f7d59957><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-f7d59957 data-v-6586aa82 data-v-4eb72782><span class="check" data-v-4eb72782><span class="icon" data-v-4eb72782><!--[--><span class="vpi-sun sun" data-v-6586aa82></span><span class="vpi-moon moon" data-v-6586aa82></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-90d08016 data-v-cb1878ad data-v-fd8dd119><!--[--><a class="VPSocialLink no-icon" href="https://github.com/chengliang4810/jimuqu-admin" aria-label="github" target="_blank" rel="noopener" data-v-fd8dd119 data-v-94938714><span class="vpi-social-github"></span></a><a class="VPSocialLink no-icon" href="https://gitee.com/opensolon/jimuqu-admin" aria-label target="_blank" rel="noopener" data-v-fd8dd119 data-v-94938714><svg t="1710470546803" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1442" width="200" height="200"><path d="M512 512m-494.933333 0a494.933333 494.933333 0 1 0 989.866666 0 494.933333 494.933333 0 1 0-989.866666 0Z" fill="#C71D23" p-id="1443"></path><path d="M762.538667 457.045333h-281.088a24.4736 24.4736 0 0 0-24.439467 24.405334v61.098666c-0.034133 13.5168 10.922667 24.439467 24.405333 24.439467h171.1104c13.5168 0 24.439467 10.922667 24.439467 24.439467v12.219733a73.3184 73.3184 0 0 1-73.3184 73.3184h-232.209067a24.439467 24.439467 0 0 1-24.439466-24.439467v-232.174933a73.3184 73.3184 0 0 1 73.3184-73.3184h342.152533c13.482667 0 24.405333-10.922667 24.439467-24.439467l0.034133-61.098666a24.405333 24.405333 0 0 0-24.405333-24.439467H420.352a183.296 183.296 0 0 0-183.296 183.296V762.538667c0 13.482667 10.922667 24.439467 24.405333 24.439466h360.516267a164.9664 164.9664 0 0 0 165.000533-165.000533v-140.526933a24.439467 24.439467 0 0 0-24.439466-24.439467z" fill="#FFFFFF" p-id="1444"></path></svg></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-90d08016 data-v-8f328a02 data-v-f4e8cac1><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-f4e8cac1><span class="vpi-more-horizontal icon" data-v-f4e8cac1></span></button><div class="menu" data-v-f4e8cac1><div class="VPMenu" data-v-f4e8cac1 data-v-55c03e72><!----><!--[--><!--[--><!----><div class="group" data-v-8f328a02><div class="item appearance" data-v-8f328a02><p class="label" data-v-8f328a02>浅/深色模式切换</p><div class="appearance-action" data-v-8f328a02><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-8f328a02 data-v-6586aa82 data-v-4eb72782><span class="check" data-v-4eb72782><span class="icon" data-v-4eb72782><!--[--><span class="vpi-sun sun" data-v-6586aa82></span><span class="vpi-moon moon" data-v-6586aa82></span><!--]--></span></span></button></div></div></div><div class="group" data-v-8f328a02><div class="item social-links" data-v-8f328a02><div class="VPSocialLinks social-links-list" data-v-8f328a02 data-v-fd8dd119><!--[--><a class="VPSocialLink no-icon" href="https://github.com/chengliang4810/jimuqu-admin" aria-label="github" target="_blank" rel="noopener" data-v-fd8dd119 data-v-94938714><span class="vpi-social-github"></span></a><a class="VPSocialLink no-icon" href="https://gitee.com/opensolon/jimuqu-admin" aria-label target="_blank" rel="noopener" data-v-fd8dd119 data-v-94938714><svg t="1710470546803" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1442" width="200" height="200"><path d="M512 512m-494.933333 0a494.933333 494.933333 0 1 0 989.866666 0 494.933333 494.933333 0 1 0-989.866666 0Z" fill="#C71D23" p-id="1443"></path><path d="M762.538667 457.045333h-281.088a24.4736 24.4736 0 0 0-24.439467 24.405334v61.098666c-0.034133 13.5168 10.922667 24.439467 24.405333 24.439467h171.1104c13.5168 0 24.439467 10.922667 24.439467 24.439467v12.219733a73.3184 73.3184 0 0 1-73.3184 73.3184h-232.209067a24.439467 24.439467 0 0 1-24.439466-24.439467v-232.174933a73.3184 73.3184 0 0 1 73.3184-73.3184h342.152533c13.482667 0 24.405333-10.922667 24.439467-24.439467l0.034133-61.098666a24.405333 24.405333 0 0 0-24.405333-24.439467H420.352a183.296 183.296 0 0 0-183.296 183.296V762.538667c0 13.482667 10.922667 24.439467 24.405333 24.439466h360.516267a164.9664 164.9664 0 0 0 165.000533-165.000533v-140.526933a24.439467 24.439467 0 0 0-24.439466-24.439467z" fill="#FFFFFF" p-id="1444"></path></svg></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-90d08016 data-v-9dda4a7a><span class="container" data-v-9dda4a7a><span class="top" data-v-9dda4a7a></span><span class="middle" data-v-9dda4a7a></span><span class="bottom" data-v-9dda4a7a></span></span></button></div></div></div></div><div class="divider" data-v-90d08016><div class="divider-line" data-v-90d08016></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-7e4c53a3 data-v-4332a127><div class="container" data-v-4332a127><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-4332a127 data-v-dd9e65a6><button data-v-dd9e65a6>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-7e4c53a3 data-v-03bc5fb1><div class="VPDoc has-aside" data-v-03bc5fb1 data-v-705047b4><!--[--><!--]--><div class="container" data-v-705047b4><div class="aside" data-v-705047b4><div class="aside-curtain" data-v-705047b4></div><div class="aside-container" data-v-705047b4><div class="aside-content" data-v-705047b4><div class="VPDocAside" data-v-705047b4 data-v-fdc2da01><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-fdc2da01 data-v-65ee8da8><div class="content" data-v-65ee8da8><div class="outline-marker" data-v-65ee8da8></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-65ee8da8>文章导航</div><ul class="VPDocOutlineItem root" data-v-65ee8da8 data-v-39ee5ee0><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-fdc2da01></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-705047b4><div class="content-container" data-v-705047b4><!--[--><!--]--><main class="main" data-v-705047b4><div style="position:relative;" class="vp-doc _api-examples external-link-icon-enabled" data-v-705047b4><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to “Runtime API Examples”">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">const { theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/script&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to “Results”">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to “Theme Data”">​</a></h3><pre>{
+  &quot;externalLinkIcon&quot;: true,
+  &quot;outline&quot;: {
+    &quot;label&quot;: &quot;文章导航&quot;
+  },
+  &quot;logo&quot;: &quot;/logo.png&quot;,
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;algolia&quot;,
+    &quot;options&quot;: {
+      &quot;appId&quot;: &quot;2GDHP2JZGR&quot;,
+      &quot;apiKey&quot;: &quot;f37974ce9f9221371283a6cd21a48e16&quot;,
+      &quot;indexName&quot;: &quot;doc&quot;
+    }
+  },
+  &quot;lastUpdated&quot;: {
+    &quot;text&quot;: &quot;更新时间&quot;,
+    &quot;formatOptions&quot;: {
+      &quot;year&quot;: &quot;numeric&quot;,
+      &quot;month&quot;: &quot;numeric&quot;,
+      &quot;day&quot;: &quot;numeric&quot;,
+      &quot;hour&quot;: &quot;numeric&quot;,
+      &quot;minute&quot;: &quot;numeric&quot;,
+      &quot;second&quot;: &quot;numeric&quot;,
+      &quot;hour12&quot;: false
+    }
+  },
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;🔥首页&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;🍪指南&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;介绍&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;前言&quot;,
+              &quot;link&quot;: &quot;/guide/&quot;
+            },
+            {
+              &quot;text&quot;: &quot;前往体验&quot;,
+              &quot;link&quot;: &quot;https://admin.jimuqu.com&quot;
+            }
+          ]
+        },
+        {
+          &quot;text&quot;: &quot;使用&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;前言&quot;,
+              &quot;link&quot;: &quot;/guide/use&quot;
+            }
+          ]
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;✋演示系统&quot;,
+      &quot;link&quot;: &quot;https://admin.jimuqu.com&quot;
+    },
+    {
+      &quot;text&quot;: &quot;🛞开源项目&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;solon&quot;,
+          &quot;link&quot;: &quot;/open-source/solon/&quot;
+        },
+        {
+          &quot;text&quot;: &quot;snail-job&quot;,
+          &quot;link&quot;: &quot;/open-source/snail-job/&quot;
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;🛌常用指令&quot;,
+      &quot;link&quot;: &quot;/linux/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;🦁团队&quot;,
+      &quot;link&quot;: &quot;/team/&quot;
+    }
+  ],
+  &quot;docFooter&quot;: {
+    &quot;prev&quot;: &quot;上一篇&quot;,
+    &quot;next&quot;: &quot;下一篇&quot;
+  },
+  &quot;darkModeSwitchLabel&quot;: &quot;浅/深色模式切换&quot;,
+  &quot;darkModeSwitchTitle&quot;: &quot;切换到深色模式&quot;,
+  &quot;lightModeSwitchTitle&quot;: &quot;切换到浅色模式&quot;,
+  &quot;sidebar&quot;: {
+    &quot;/open-source/solon/&quot;: [
+      {
+        &quot;text&quot;: &quot;Solon&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;简介&quot;,
+            &quot;link&quot;: &quot;/open-source/solon/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;集成MybatisPlusGenerator&quot;,
+            &quot;link&quot;: &quot;/open-source/solon/mybatis-plus-generator&quot;
+          },
+          {
+            &quot;text&quot;: &quot;无需注解生成接口文档&quot;,
+            &quot;link&quot;: &quot;/open-source/solon/openapi2-javadoc&quot;
+          },
+          {
+            &quot;text&quot;: &quot;docs文档辅助插件&quot;,
+            &quot;link&quot;: &quot;/open-source/solon/doc-docket&quot;
+          }
+        ]
+      }
+    ],
+    &quot;/linux/&quot;: [
+      {
+        &quot;text&quot;: &quot;Linux&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;前言&quot;,
+            &quot;link&quot;: &quot;/linux/&quot;
+          },
+          {
+            &quot;text&quot;: &quot;指令&quot;,
+            &quot;link&quot;: &quot;/linux/code&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;footer&quot;: {
+    &quot;message&quot;: &quot;打造适合打工人的Admin框架.&quot;,
+    &quot;copyright&quot;: &quot;Copyright © 2024-2025 jimuqu.com&quot;
+  },
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/chengliang4810/jimuqu-admin&quot;
+    },
+    {
+      &quot;icon&quot;: {
+        &quot;svg&quot;: &quot;&lt;svg t=\&quot;1710470546803\&quot; class=\&quot;icon\&quot; viewBox=\&quot;0 0 1024 1024\&quot; version=\&quot;1.1\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; p-id=\&quot;1442\&quot; width=\&quot;200\&quot; height=\&quot;200\&quot;&gt;&lt;path d=\&quot;M512 512m-494.933333 0a494.933333 494.933333 0 1 0 989.866666 0 494.933333 494.933333 0 1 0-989.866666 0Z\&quot; fill=\&quot;#C71D23\&quot; p-id=\&quot;1443\&quot;&gt;&lt;/path&gt;&lt;path d=\&quot;M762.538667 457.045333h-281.088a24.4736 24.4736 0 0 0-24.439467 24.405334v61.098666c-0.034133 13.5168 10.922667 24.439467 24.405333 24.439467h171.1104c13.5168 0 24.439467 10.922667 24.439467 24.439467v12.219733a73.3184 73.3184 0 0 1-73.3184 73.3184h-232.209067a24.439467 24.439467 0 0 1-24.439466-24.439467v-232.174933a73.3184 73.3184 0 0 1 73.3184-73.3184h342.152533c13.482667 0 24.405333-10.922667 24.439467-24.439467l0.034133-61.098666a24.405333 24.405333 0 0 0-24.405333-24.439467H420.352a183.296 183.296 0 0 0-183.296 183.296V762.538667c0 13.482667 10.922667 24.439467 24.405333 24.439466h360.516267a164.9664 164.9664 0 0 0 165.000533-165.000533v-140.526933a24.439467 24.439467 0 0 0-24.439466-24.439467z\&quot; fill=\&quot;#FFFFFF\&quot; p-id=\&quot;1444\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&quot;
+      },
+      &quot;link&quot;: &quot;https://gitee.com/opensolon/jimuqu-admin&quot;
+    }
+  ]
+}</pre><h3 id="page-data" tabindex="-1">Page Data <a class="header-anchor" href="#page-data" aria-label="Permalink to “Page Data”">​</a></h3><pre>{
+  &quot;title&quot;: &quot;Runtime API Examples&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;api-examples.md&quot;,
+  &quot;lastUpdated&quot;: 1710471370000
+}</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to “Page Frontmatter”">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to “More”">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-705047b4 data-v-cc0e28bf><!--[--><!--]--><div class="edit-info" data-v-cc0e28bf><!----><div class="last-updated" data-v-cc0e28bf><p class="VPLastUpdated" data-v-cc0e28bf data-v-12d75cdb>更新时间: <time datetime="2024-03-15T02:56:10.000Z" data-v-12d75cdb></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-7e4c53a3 data-v-1cd31a2c><div class="container" data-v-1cd31a2c><p class="message" data-v-1cd31a2c>打造适合打工人的Admin框架.</p><p class="copyright" data-v-1cd31a2c>Copyright © 2024-2025 jimuqu.com</p></div></footer><!--[--><!--]--></div></div>
+    
+    
+  </body>
+</html>
